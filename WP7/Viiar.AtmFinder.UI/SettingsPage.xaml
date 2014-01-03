@@ -1,0 +1,126 @@
+﻿<phone:PhoneApplicationPage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:local="clr-namespace:Viiar.AtmFinder.UI" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+                            x:Class="Viiar.AtmFinder.UI.SettingsPage" Orientation="Portrait" shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <local:AppSettings x:Key="appSettings" />
+        <local:VisibilityConverter x:Key="VisibilityConverter" />
+        <local:InverseVisibilityConverter x:Key="InverseVisibilityConverter" />
+
+        <DataTemplate x:Key="FullModeItemTemplate">
+            <TextBlock Margin="0,24,0,0" TextWrapping="Wrap" Text="{Binding BindsDirectlyToSource=True}" FontSize="32" FontFamily="Segoe WP Light" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="ItemTemplate">
+            <StackPanel Orientation="Vertical">
+                <Border VerticalAlignment="Top" Width="500" BorderThickness="0,0,0,1" BorderBrush="#FF333333"
+                        Visibility="{Binding IsLastInCountry, Converter={StaticResource VisibilityConverter}}">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                        <CheckBox IsChecked="{Binding IsSelected}" Click="OnMyBankClicked" Tag="{Binding Code}"></CheckBox>
+                        <TextBlock Margin="0,16,0,0" Text="{Binding Name}" FontSize="24" FontFamily="Segoe WP Light" TextWrapping="Wrap"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border VerticalAlignment="Top" Width="500" BorderThickness="0,0,0,1" BorderBrush="#FF000000"
+                        Visibility="{Binding IsLastInCountry, Converter={StaticResource InverseVisibilityConverter}}">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                        <CheckBox IsChecked="{Binding IsSelected}" Click="OnMyBankClicked" Tag="{Binding Code}"></CheckBox>
+                        <TextBlock Margin="0,16,0,0" Text="{Binding Name}" FontSize="24" FontFamily="Segoe WP Light" TextWrapping="Wrap"></TextBlock>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <controls:Pivot Title="{Binding Path=ApplicationName, Source={StaticResource LocalizedStrings}}" FontFamily="Segoe WP Light" FontSize="20"
+                        x:Name="pivotMain">
+            <controls:PivotItem x:Name="piSettings" FontFamily="Segoe WP Light" Tag="settings"
+                                Header="{Binding Path=LocalizedResources.SettingsPageName, Source={StaticResource LocalizedStrings}}">
+                <ScrollViewer>
+                    <StackPanel x:Name="ContentPanel" Width="456">
+                        <toolkit:ListPicker Margin="8" Header="{Binding Path=LocalizedResources.CountrySettingText, Source={StaticResource LocalizedStrings}}"
+                                            ItemsSource="{Binding Instance.CountrySelection, Source={StaticResource appSettings}}"
+                                            SelectedItem="{Binding Instance.CountrySetting, Mode=TwoWay, Source={StaticResource appSettings}}" VerticalAlignment="Bottom" CacheMode="BitmapCache"
+                                            FullModeItemTemplate="{StaticResource FullModeItemTemplate}" />
+                        <StackPanel Margin="8,8,0,8" CacheMode="BitmapCache">
+                            <TextBlock Margin="0" TextWrapping="Wrap"
+                                       Text="{Binding Path=LocalizedResources.ZoomToClosestSettingsText, Source={StaticResource LocalizedStrings}}" />
+                            <toolkit:ToggleSwitch x:Name="tglZoomEnabled" Margin="0" d:LayoutOverrides="Width" Checked="SwitchOn" Unchecked="SwitchOff"
+                                                  IsChecked="{Binding Instance.ZoomToClosestSetting, Mode=TwoWay, Source={StaticResource appSettings}}" />
+                        </StackPanel>
+                        <StackPanel Margin="8,8,0,8" CacheMode="BitmapCache">
+                            <TextBlock Margin="0" TextWrapping="Wrap"
+                                       Text="{Binding Path=LocalizedResources.ShowMapOnStartupSettingsText, Source={StaticResource LocalizedStrings}}" />
+                            <toolkit:ToggleSwitch x:Name="tglShowMapOnStartup" Margin="0" d:LayoutOverrides="Width" Checked="SwitchOn" Unchecked="SwitchOff"
+                                                  IsChecked="{Binding Instance.ShowMapOnStartupSetting, Mode=TwoWay, Source={StaticResource appSettings}}" />
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.ShowTypesOfSettingsText, Source={StaticResource LocalizedStrings}}"
+                                       Margin="8,0" />
+                            <CheckBox Content="{Binding Path=LocalizedResources.ShowTypesOfCashOutSettingsText, Source={StaticResource LocalizedStrings}}"
+                                      IsChecked="{Binding Instance.ShowATMSetting, Mode=TwoWay, Source={StaticResource appSettings}}" />
+                            <CheckBox Content="{Binding Path=LocalizedResources.ShowTypesOfCashInSettingsText, Source={StaticResource LocalizedStrings}}"
+                                      IsChecked="{Binding Instance.ShowATMCashInSetting, Mode=TwoWay, Source={StaticResource appSettings}}" />
+                            <CheckBox Content="{Binding Path=LocalizedResources.ShowTypesOfOfficesSettingsText, Source={StaticResource LocalizedStrings}}"
+                                      IsChecked="{Binding Instance.ShowOfficesSetting, Mode=TwoWay, Source={StaticResource appSettings}}" />
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </controls:PivotItem>
+
+            <controls:PivotItem Header="{Binding Path=LocalizedResources.AppearancePivotHeading, Source={StaticResource LocalizedStrings}}" Tag="appearance"
+                                x:Name="piAppearance">
+                <StackPanel Width="456">
+                    <toolkit:ListPicker Margin="8" Header="Language (restart required)"
+                                        ItemsSource="{Binding Instance.UILanguageSelection, Source={StaticResource appSettings}}"
+                                        SelectedItem="{Binding Instance.UILanguageSetting, Mode=TwoWay, Source={StaticResource appSettings}}" VerticalAlignment="Bottom" CacheMode="BitmapCache"
+                                        FullModeItemTemplate="{StaticResource FullModeItemTemplate}" />
+                    <toolkit:ListPicker Margin="8" Header="{Binding Path=LocalizedResources.CountToShowSettingsText, Source={StaticResource LocalizedStrings}}"
+                                        ItemsSource="{Binding Instance.ShowClosestSelections, Source={StaticResource appSettings}}"
+                                        SelectedItem="{Binding Instance.ShowClosestSetting, Mode=TwoWay, Source={StaticResource appSettings}}" VerticalAlignment="Bottom" CacheMode="BitmapCache"
+                                        Padding="0" />
+                    <TextBlock Margin="0" TextWrapping="Wrap"
+                               Text="{Binding Path=LocalizedResources.ShowCoordinatesSettingsText, Source={StaticResource LocalizedStrings}}" />
+                    <toolkit:ToggleSwitch x:Name="tglShowCoordinates" Margin="0" d:LayoutOverrides="Width" Checked="SwitchOn" Unchecked="SwitchOff"
+                                          IsChecked="{Binding Instance.ShowCoordinatesSetting, Mode=TwoWay, Source={StaticResource appSettings}}" />
+
+                </StackPanel>
+            </controls:PivotItem>
+
+            <controls:PivotItem Header="{Binding Path=LocalizedResources.ConnectivityPivotHeading, Source={StaticResource LocalizedStrings}}" Tag="connectivity"
+                                x:Name="piConectivity">
+                <StackPanel>
+                    <TextBlock Margin="0" TextWrapping="Wrap"
+                               Text="{Binding Path=LocalizedResources.OnlineServicesSettingsText, Source={StaticResource LocalizedStrings}}" />
+                    <toolkit:ToggleSwitch x:Name="tglOnlineServicesEnabled" Margin="0" d:LayoutOverrides="Width" Checked="SwitchOn" Unchecked="SwitchOff"
+                                          IsChecked="{Binding Instance.IsOnlineServicesAvailable, Mode=TwoWay, Source={StaticResource appSettings}}" />
+                    <TextBlock Margin="0" TextWrapping="Wrap"
+                               Text="{Binding Path=LocalizedResources.LocationServicesSettingsText, Source={StaticResource LocalizedStrings}}" />
+                    <toolkit:ToggleSwitch x:Name="tglLocationServicesEnabled" Margin="0" d:LayoutOverrides="Width" Checked="SwitchOn" Unchecked="SwitchOff"
+                                          IsChecked="{Binding Instance.IsLocationServicesAvailable, Mode=TwoWay, Source={StaticResource appSettings}}" />
+                </StackPanel>
+            </controls:PivotItem>
+
+            <controls:PivotItem Header="{Binding Path=LocalizedResources.MyBankPivotHeading, Source={StaticResource LocalizedStrings}}" Tag="mybank"
+                                x:Name="piMyBank">
+                <StackPanel>
+                    <TextBlock Margin="0" TextWrapping="Wrap"
+                               Text="{Binding Path=LocalizedResources.ShowOnlyMyBankSettingsText, Source={StaticResource LocalizedStrings}}" />
+                    <toolkit:ToggleSwitch x:Name="tglShowOnlyMyBank" Margin="0" d:LayoutOverrides="Width" Checked="SwitchOn" Unchecked="SwitchOff"
+                                          IsChecked="{Binding Instance.ShowOnlyMyBankSetting, Mode=TwoWay, Source={StaticResource appSettings}}" />
+                    <ListBox x:Name="lbMyBank" Margin="0" HorizontalAlignment="Stretch" ItemsSource="{Binding Collection}" ItemTemplate="{StaticResource ItemTemplate}"
+                             MaxHeight="480" Height="480"></ListBox>
+                </StackPanel>
+            </controls:PivotItem>
+
+            <controls:PivotItem Header="{Binding Path=LocalizedResources.AboutPivotHeading, Source={StaticResource LocalizedStrings}}" Tag="about" x:Name="piAbout">
+                <local:AboutApp x:Name="aboutApp" />
+            </controls:PivotItem>
+
+        </controls:Pivot>
+
+    </Grid>
+</phone:PhoneApplicationPage>

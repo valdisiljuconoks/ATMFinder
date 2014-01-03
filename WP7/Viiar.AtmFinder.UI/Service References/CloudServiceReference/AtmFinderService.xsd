@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://viiar-consulting.lv/atmfinder/azureservices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:81/AtmFinderService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:81/AtmFinderService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="FindNearby">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="latitude" type="xs:double" />
+        <xs:element minOccurs="0" name="longitude" type="xs:double" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="myBanks" nillable="true" type="q1:ArrayOfstring" />
+        <xs:element minOccurs="0" name="showOnlyMyBanks" type="xs:boolean" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindNearbyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://viiar-consulting.lv/atmfinder/azureservices" minOccurs="0" name="FindNearbyResult" nillable="true" type="q2:ServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ServiceResponse">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://viiar-consulting.lv/atmfinder/azureservices" minOccurs="0" name="NearbyCashInMachines" nillable="true" type="q3:ArrayOfEntity" />
+      <xs:element xmlns:q4="http://viiar-consulting.lv/atmfinder/azureservices" minOccurs="0" name="NearbyCashOutMachines" nillable="true" type="q4:ArrayOfEntity" />
+      <xs:element xmlns:q5="http://viiar-consulting.lv/atmfinder/azureservices" minOccurs="0" name="NearbyOffices" nillable="true" type="q5:ArrayOfEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q6="http://viiar-consulting.lv/atmfinder/azureservices" name="ServiceResponse" nillable="true" type="q6:ServiceResponse" />
+  <xs:complexType name="ArrayOfEntity">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://viiar-consulting.lv/atmfinder/azureservices" minOccurs="0" maxOccurs="unbounded" name="Entity" nillable="true" type="q7:Entity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q8="http://viiar-consulting.lv/atmfinder/azureservices" name="ArrayOfEntity" nillable="true" type="q8:ArrayOfEntity" />
+  <xs:complexType name="Entity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://viiar-consulting.lv/atmfinder/azureservices" base="q9:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressShort" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CashDirection" type="q9:CashDirection" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Distance" type="xs:decimal" />
+          <xs:element minOccurs="0" name="DistanceUnits" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DistanceView" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntityType" type="q9:EntityType" />
+          <xs:element minOccurs="0" name="Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+          <xs:element minOccurs="0" name="Longitude" type="xs:double" />
+          <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShowCommissionWithdrawalSign" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TitleShort" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkingHours" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkingHoursEnd" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkingHoursStart" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q10="http://viiar-consulting.lv/atmfinder/azureservices" name="Entity" nillable="true" type="q10:Entity" />
+  <xs:complexType name="BaseEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Chain" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChainCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Icon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IconMap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SmallIcon" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q11="http://viiar-consulting.lv/atmfinder/azureservices" name="BaseEntity" nillable="true" type="q11:BaseEntity" />
+  <xs:simpleType name="CashDirection">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="In">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Out">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element xmlns:q12="http://viiar-consulting.lv/atmfinder/azureservices" name="CashDirection" nillable="true" type="q12:CashDirection" />
+  <xs:simpleType name="EntityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Atm" />
+      <xs:enumeration value="Branch" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q13="http://viiar-consulting.lv/atmfinder/azureservices" name="EntityType" nillable="true" type="q13:EntityType" />
+</xs:schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="34ad85b8-48ac-43d3-bb2d-baf1c05d138c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:81/AtmFinderService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AtmFinderService1.xsd" MetadataType="Schema" ID="2acfb93a-1bab-477a-94df-53e3acca6451" SourceId="1" SourceUrl="http://localhost:81/AtmFinderService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AtmFinderService.xsd" MetadataType="Schema" ID="b68ba948-679a-4bb9-bd6c-b8e037c1648b" SourceId="1" SourceUrl="http://localhost:81/AtmFinderService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AtmFinderService2.xsd" MetadataType="Schema" ID="8d8fac24-dd27-4bff-bd3f-6d69d5d35f08" SourceId="1" SourceUrl="http://localhost:81/AtmFinderService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AtmFinderService2.wsdl" MetadataType="Wsdl" ID="954bb2e3-027e-4cc2-b472-9f18df4cfb43" SourceId="1" SourceUrl="http://localhost:81/AtmFinderService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AtmFinderService21.wsdl" MetadataType="Wsdl" ID="3b3b96e0-15aa-4db1-b04d-bd4113977d4b" SourceId="1" SourceUrl="http://localhost:81/AtmFinderService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

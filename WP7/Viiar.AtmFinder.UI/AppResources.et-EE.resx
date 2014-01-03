@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutDescription" xml:space="preserve">
+    <value>Oled Sa kunagi olnud olukorras, kus vajad sularaha, soovid näha oma kontoseisu või pead tegema sissemakse, kuid Sul pole aimugi lähima pangaautomaadi asukohast? ATM Finder aitab mugavalt leida Sinu praegusele asukohale lähima pangaautomaadi. Rakenduses saad valida oma kodupanga, et kuvataks ainult neid kohti.</value>
+  </data>
+  <data name="AboutIntro" xml:space="preserve">
+    <value>ATM Finder aitab leida lähimad pangaautomaadid Baltikumis.</value>
+  </data>
+  <data name="AboutPivotHeading" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>ATM Finder</value>
+  </data>
+  <data name="Authors" xml:space="preserve">
+    <value>Autor: Valdis Iljuconoks, MVP C#
+http://www.dotnet.lv/blogs/vi/
+Kõik õigused kaitstud © Valdis Iljuconoks, 2012</value>
+  </data>
+  <data name="CashInIconText" xml:space="preserve">
+    <value>sissemakse</value>
+  </data>
+  <data name="CashInPivotHeading" xml:space="preserve">
+    <value>sissemakse</value>
+  </data>
+  <data name="CashOutIconText" xml:space="preserve">
+    <value>väljamakse</value>
+  </data>
+  <data name="CashOutPivotHeading" xml:space="preserve">
+    <value>väljamakse</value>
+  </data>
+  <data name="CenterMeBarButton" xml:space="preserve">
+    <value>minu asukoht</value>
+  </data>
+  <data name="CommissionWithDrawalLongSign" xml:space="preserve">
+    <value>komisjonitasu</value>
+  </data>
+  <data name="CommissionWithDrawalSign" xml:space="preserve">
+    <value>komisjonitasu</value>
+  </data>
+  <data name="ContactByEmail" xml:space="preserve">
+    <value>Saada e-kiri (inglise keeles):
+valdis.iljuconoks@dotnet.lv</value>
+  </data>
+  <data name="CountrySettingText" xml:space="preserve">
+    <value>riik</value>
+  </data>
+  <data name="CountToShowSettingsText" xml:space="preserve">
+    <value>Mitu kuvada</value>
+  </data>
+  <data name="DetailsPageTitle" xml:space="preserve">
+    <value>lisainfo</value>
+  </data>
+  <data name="DirectionsBarButton" xml:space="preserve">
+    <value>juhised</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>valdis.iljuconoks@dotnet.lv</value>
+  </data>
+  <data name="ErrorDialogTitle" xml:space="preserve">
+    <value>Viga</value>
+  </data>
+  <data name="LocationServicesNotEnabledError" xml:space="preserve">
+    <value>Asukoha määramise teenused ei ole lubatud.
+Mine Seaded lehele, et võimaldada antud teenuste kasutamine.</value>
+  </data>
+  <data name="LocationServicesSettingsText" xml:space="preserve">
+    <value>asukohateenused</value>
+  </data>
+  <data name="MapBarButton" xml:space="preserve">
+    <value>kaart</value>
+  </data>
+  <data name="MyBankSettingsText" xml:space="preserve">
+    <value>Minu pank</value>
+  </data>
+  <data name="NearbyPivotHeading" xml:space="preserve">
+    <value>läheduses</value>
+  </data>
+  <data name="OfficeIconText" xml:space="preserve">
+    <value>kontor</value>
+  </data>
+  <data name="OfficesPivotHeading" xml:space="preserve">
+    <value>kontorid</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Privaatsus:
+ ATM Finder austab kasutajate privaatsust ja ei kogutakse ega salvesta Sinu andmeid
+ ATM Finder kasutab asukohateenuseid, et tuvastada seadme asukoht lähima pangaautomaadi või pangakontori määramiseks.
+ Kogutud andmeid ei salvestata ega edastata.
+ Kasutaja alati on võimalik asukohateenuste kasutamine ATM Finderis välja lülitada.</value>
+  </data>
+  <data name="RateApplication" xml:space="preserve">
+    <value>Hinda rakendust</value>
+  </data>
+  <data name="RefreshBarButton" xml:space="preserve">
+    <value>värskenda</value>
+  </data>
+  <data name="SettingsMenuItem" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="SettingsPageName" xml:space="preserve">
+    <value>general</value>
+  </data>
+  <data name="ShowOnlyMyBankSettingsText" xml:space="preserve">
+    <value>Näita ainult minu panka</value>
+  </data>
+  <data name="ShowTypesOfCashInSettingsText" xml:space="preserve">
+    <value>Sissemaksete automaadid</value>
+  </data>
+  <data name="ShowTypesOfCashOutSettingsText" xml:space="preserve">
+    <value>Väljamaksete automaadid</value>
+  </data>
+  <data name="ShowTypesOfOfficesSettingsText" xml:space="preserve">
+    <value>Kontorid</value>
+  </data>
+  <data name="ShowTypesOfSettingsText" xml:space="preserve">
+    <value>Kuva järgmisi asukohti</value>
+  </data>
+  <data name="ShowTypesOfShopsSettingsText" xml:space="preserve">
+    <value>Poed</value>
+  </data>
+  <data name="StartLocationMapDirections" xml:space="preserve">
+    <value>sinu asukoht</value>
+  </data>
+  <data name="SwitchedOff" xml:space="preserve">
+    <value>väljas</value>
+  </data>
+  <data name="SwitchedOn" xml:space="preserve">
+    <value>sees</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>Versioonid:
+
+v 2.0
+- Lisatud Windows Azure teenuste
+- Fikseeritud mõned vead
+- Lisatud mõned pangad kõigis Balti riikides
+
+v 1.2
+- Mõned veaparandused
+
+v 1.1
+- Lisatud mitme riigi tugi
+- Lisatud Swebbank ja Nordea pangad (Eesti)
+- Lisatud Swebbank ja Nordea pangad (Leedu)
+- Lisatud SEB pank (Eesti ja Leedu)
+- Lisatud DNB pank (Leedu)
+- Parandatud komisjonitasuga automaatide andmeid
+
+v 1.0
+- Lisatud Swedbank, Nordea, Citadele ja DNB pangad (Läti)
+- Lisatud Hipoteku ja SEB pangad (Läti)
+- Lisatud asukoha tüüpide filtreerimine
+- Lisatud kuvatavate üksuste arvu valik
+- Lisatud komisjonitasuga automaadid</value>
+  </data>
+  <data name="ZoomToClosestSettingsText" xml:space="preserve">
+    <value>Suumi lähimani</value>
+  </data>
+  <data name="SomewhereHere" xml:space="preserve">
+    <value>kuskil siin</value>
+  </data>
+  <data name="AppearancePivotHeading" xml:space="preserve">
+    <value>appearance</value>
+  </data>
+  <data name="ArealViewBarButton" xml:space="preserve">
+    <value>muuta vaadata</value>
+  </data>
+  <data name="ConnectivityPivotHeading" xml:space="preserve">
+    <value>connectivity</value>
+  </data>
+  <data name="MyBankPivotHeading" xml:space="preserve">
+    <value>my bank</value>
+  </data>
+  <data name="OnlineServicesSettingsText" xml:space="preserve">
+    <value>Online teenused (Windows © Azure)</value>
+  </data>
+  <data name="EntityTooFarMessage" xml:space="preserve">
+    <value>Seems like closest ATM is pretty far away.</value>
+    <comment>TODO</comment>
+  </data>
+  <data name="ReportBarButton" xml:space="preserve">
+    <value>report</value>
+  </data>
+  <data name="ShowMapOnStartupSettingsText" xml:space="preserve">
+    <value>Näita kaarti käivitamisel</value>
+  </data>
+</root>

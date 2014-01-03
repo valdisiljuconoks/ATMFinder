@@ -1,0 +1,11 @@
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="BeforeBuild">
+    <!-- Transform files -->
+    <CallTarget Targets="TransformAllFiles" />
+    <!-- Unset readonly attribute if any -->
+    <Exec Command="c:\windows\system32\attrib.exe -r ServiceReferences.ClientConfig" WorkingDirectory="$(MSBuildProjectDirectory)" />
+    <!-- Copy temp file -->
+    <!--<Exec Command="copy ServiceReferences.ClientConfig ServiceReferences.ClientConfig.Temp /y" WorkingDirectory="$(MSBuildProjectDirectory)" />-->
+    <Exec Command="c:\windows\system32\xcopy.exe &quot;$(OutDir)ServiceReferences.ClientConfig&quot; ServiceReferences.ClientConfig /y" WorkingDirectory="$(MSBuildProjectDirectory)" />
+  </Target>
+</Project>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://viiar-consulting.lv/atmfinder/azureservices" elementFormDefault="qualified" targetNamespace="http://viiar-consulting.lv/atmfinder/azureservices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FindCoordinates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="searchTerm" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCoordinatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindCoordinatesResult" nillable="true" type="tns:GeoServiceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GeoServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Locations" nillable="true" type="tns:ArrayOfGeoLocationMatch" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeoServiceResponse" nillable="true" type="tns:GeoServiceResponse" />
+  <xs:complexType name="ArrayOfGeoLocationMatch">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GeoLocationMatch" nillable="true" type="tns:GeoLocationMatch" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGeoLocationMatch" nillable="true" type="tns:ArrayOfGeoLocationMatch" />
+  <xs:complexType name="GeoLocationMatch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeoLocationMatch" nillable="true" type="tns:GeoLocationMatch" />
+</xs:schema>

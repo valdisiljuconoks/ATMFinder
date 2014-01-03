@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4e83df6d-120f-4d21-aacc-45c9366a39fd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:81/ClassifiersService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="classifiersservice1.disco" MetadataType="Disco" ID="fd58949d-7c81-4983-87ca-827bf62ed6c3" SourceId="1" SourceUrl="http://127.0.0.1:81/classifiersservice.svc?disco" />
+    <MetadataFile FileName="ClassifiersService2.wsdl" MetadataType="Wsdl" ID="6a71437d-17f2-421b-ad6a-69f27a13d5ee" SourceId="1" SourceUrl="http://127.0.0.1:81/ClassifiersService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ClassifiersService4.xsd" MetadataType="Schema" ID="7943a2a9-53bc-42f2-8db6-b4fab8a916d5" SourceId="1" SourceUrl="http://127.0.0.1:81/ClassifiersService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ClassifiersService41.xsd" MetadataType="Schema" ID="e67119d2-1935-429c-9cd5-ae6aca5993ca" SourceId="1" SourceUrl="http://127.0.0.1:81/ClassifiersService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ClassifiersService42.xsd" MetadataType="Schema" ID="f84c11f1-4404-4e30-8feb-7b21d95bc84c" SourceId="1" SourceUrl="http://127.0.0.1:81/ClassifiersService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ClassifiersService43.xsd" MetadataType="Schema" ID="1bd51401-1db2-4228-be34-163f3caa1360" SourceId="1" SourceUrl="http://127.0.0.1:81/ClassifiersService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ClassifiersService21.wsdl" MetadataType="Wsdl" ID="f6162930-33bd-40c3-86b8-6403233fc11c" SourceId="1" SourceUrl="http://127.0.0.1:81/ClassifiersService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

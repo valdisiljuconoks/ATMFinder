@@ -1,0 +1,14 @@
+﻿<Application x:Class="Viiar.AtmFinder.W8.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Common="using:Viiar.AtmFinder.W8.Common">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Common/CustomStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <x:String x:Key="AppName">ATM Finder</x:String>
+            <Common:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <Common:BooleanToVisibilityNegationConverter x:Key="booleanToVisibilityNegationConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

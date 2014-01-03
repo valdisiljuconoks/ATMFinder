@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutDescription" xml:space="preserve">
+    <value>Попадали ли Вы когда-нибудь в ситуацию, когда Вам срочно необходимы наличные деньги для оплаты важной покупки, а Вы не представляете где находится ближайший банкомат? С помощью аппликации 'ATM Finder' вы легко сможете найти ближайший банкомат, отделение банка, а так же банкоматы для взноса наличных. Так же возможно редактировать необходимую Вам информацию (например, выбрав только отделения Вашего банка).</value>
+  </data>
+  <data name="AboutIntro" xml:space="preserve">
+    <value>Поиск ближайшего банкомата с помощью аппликации ATM Finder.</value>
+  </data>
+  <data name="AboutPivotHeading" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>ATM Finder</value>
+  </data>
+  <data name="Authors" xml:space="preserve">
+    <value>Автор: Valdis Iljuconoks, MVP C#
+http://www.dotnet.lv/blogs/vi/
+Все права защищены © Valdis Iljuconoks, 2012</value>
+  </data>
+  <data name="CashInIconText" xml:space="preserve">
+    <value>взнос наличных</value>
+  </data>
+  <data name="CashInPivotHeading" xml:space="preserve">
+    <value>взнос</value>
+  </data>
+  <data name="CashOutIconText" xml:space="preserve">
+    <value>выплата наличных</value>
+  </data>
+  <data name="CashOutPivotHeading" xml:space="preserve">
+    <value>выплата</value>
+  </data>
+  <data name="CenterMeBarButton" xml:space="preserve">
+    <value>моя позиция</value>
+  </data>
+  <data name="CommissionWithDrawalLongSign" xml:space="preserve">
+    <value>Kомиссионные за выплату наличных</value>
+  </data>
+  <data name="CommissionWithDrawalSign" xml:space="preserve">
+    <value>комиссия</value>
+  </data>
+  <data name="ContactByEmail" xml:space="preserve">
+    <value>Cвязаться по электронной почте:
+valdis.iljuconoks@dotnet.lv</value>
+  </data>
+  <data name="CountrySettingText" xml:space="preserve">
+    <value>Cтрана</value>
+  </data>
+  <data name="CountToShowSettingsText" xml:space="preserve">
+    <value>Показывать в списке</value>
+  </data>
+  <data name="DetailsPageTitle" xml:space="preserve">
+    <value>детали</value>
+  </data>
+  <data name="DirectionsBarButton" xml:space="preserve">
+    <value>указатели</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>valdis.iljuconoks@dotnet.lv</value>
+  </data>
+  <data name="ErrorDialogTitle" xml:space="preserve">
+    <value>Oшибка</value>
+  </data>
+  <data name="LocationServicesNotEnabledError" xml:space="preserve">
+    <value>Сервис местонахождения выключен (определитель местонахождения выключен). 
+Используйте лист Установки для включения сервиса (определителя) местонахождения.</value>
+  </data>
+  <data name="LocationServicesSettingsText" xml:space="preserve">
+    <value>Cервисы местонахождения</value>
+  </data>
+  <data name="MapBarButton" xml:space="preserve">
+    <value>карта</value>
+  </data>
+  <data name="MyBankSettingsText" xml:space="preserve">
+    <value>Mой банк</value>
+  </data>
+  <data name="NearbyPivotHeading" xml:space="preserve">
+    <value>ближайший</value>
+  </data>
+  <data name="OfficeIconText" xml:space="preserve">
+    <value>филиал</value>
+  </data>
+  <data name="OfficesPivotHeading" xml:space="preserve">
+    <value>филиалы</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Конфиденциальность:
+ATM Finder респектирует конфиденциальную информацию пользователя. Веденная информация не собирается и не сохраняется.
+ATM Finder использует функцию определения местонахождения, чтобы помочь пользователю найти ближайший банкомат или филиал банка.
+Информация местонахождения не сохраняется и не пересылается.
+Пользователь всегда может выключить определение местонахождения.</value>
+  </data>
+  <data name="RateApplication" xml:space="preserve">
+    <value>Oцените эту аппликацию</value>
+  </data>
+  <data name="RefreshBarButton" xml:space="preserve">
+    <value>обновить</value>
+  </data>
+  <data name="SettingsMenuItem" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="SettingsPageName" xml:space="preserve">
+    <value>general</value>
+  </data>
+  <data name="ShowOnlyMyBankSettingsText" xml:space="preserve">
+    <value>Показывать только банкоматы моего банка</value>
+  </data>
+  <data name="ShowTypesOfCashInSettingsText" xml:space="preserve">
+    <value>Банкоматы взноса</value>
+  </data>
+  <data name="ShowTypesOfCashOutSettingsText" xml:space="preserve">
+    <value>Банкоматы выплаты</value>
+  </data>
+  <data name="ShowTypesOfOfficesSettingsText" xml:space="preserve">
+    <value>Филиалы</value>
+  </data>
+  <data name="ShowTypesOfSettingsText" xml:space="preserve">
+    <value>Показывать</value>
+  </data>
+  <data name="ShowTypesOfShopsSettingsText" xml:space="preserve">
+    <value>Mагазины</value>
+  </data>
+  <data name="StartLocationMapDirections" xml:space="preserve">
+    <value>Tвое местонахождение</value>
+  </data>
+  <data name="SwitchedOff" xml:space="preserve">
+    <value>выкл.</value>
+  </data>
+  <data name="SwitchedOn" xml:space="preserve">
+    <value>вкл.</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>Версии:
+
+v 2.0
+- Добавлены услуги Windows Azure
+- Исправлены некоторые ошибки
+- Добавлены некоторые банки во всех странах Балтии
+
+v 1.2
+- Исправлены некоторые ошибки
+
+v 1.1
+- Добавлена возможность просматривать несколько стран
+- Добавлены Swedbank и Nordea (Эстония)
+- Добавлены Swedbank и Nordea (Литва)
+- Добавлен SEB банк (Литва и Эстония)
+- DNB банк (Эстония)
+- Исправлены некоторые ошибки цепочки дружных банков
+
+v 1.0
+- Добавлены банки Swedbank, Nordea, Citadele и DNB (территория Латвии)
+- Добавлены банки Hipoteku и SEB (территория Латвии)
+- Добавлена возможность фильтрирование по типам банкоматов
+- Добавлена возможность ограничения количество записей
+- Добавлена возможность увидеть сеть дружных (дружественных) банков (комиссионные за выплату)</value>
+  </data>
+  <data name="ZoomToClosestSettingsText" xml:space="preserve">
+    <value>Показывать ближайший</value>
+  </data>
+  <data name="SomewhereHere" xml:space="preserve">
+    <value>где-то здесь</value>
+  </data>
+  <data name="AppearancePivotHeading" xml:space="preserve">
+    <value>appearance</value>
+  </data>
+  <data name="ArealViewBarButton" xml:space="preserve">
+    <value>изменить вид</value>
+  </data>
+  <data name="ConnectivityPivotHeading" xml:space="preserve">
+    <value>connectivity</value>
+  </data>
+  <data name="MyBankPivotHeading" xml:space="preserve">
+    <value>my bank</value>
+  </data>
+  <data name="OnlineServicesSettingsText" xml:space="preserve">
+    <value>Интернет услуги (Windows © Azure)</value>
+  </data>
+  <data name="EntityTooFarMessage" xml:space="preserve">
+    <value>К сожалению, ближайший банкомат находится слишком далеко.</value>
+  </data>
+  <data name="ShowMapOnStartupSettingsText" xml:space="preserve">
+    <value>Показать карту при запуске</value>
+  </data>
+</root>

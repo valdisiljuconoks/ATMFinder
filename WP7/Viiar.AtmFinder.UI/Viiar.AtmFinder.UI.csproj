@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask TaskName="TransformXml" AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\Web\Microsoft.Web.Publishing.Tasks.dll" />
+  <!--<ItemDefinitionGroup>
+    <None>
+      <TransformOnBuild>false</TransformOnBuild>
+    </None>
+    <Content>
+      <TransformOnBuild>false</TransformOnBuild>
+    </Content>
+    <Resource>
+      <TransformOnBuild>false</TransformOnBuild>
+    </Resource>
+    <EmbeddedResource>
+      <TransformOnBuild>false</TransformOnBuild>
+    </EmbeddedResource>
+    <_FilesToTransform>
+      <IsAppConfig>false</IsAppConfig>
+    </_FilesToTransform>
+  </ItemDefinitionGroup>
+  <PropertyGroup>
+    <TransformAllFilesDependsOn>
+      DiscoverFilesToTransform;
+    </TransformAllFilesDependsOn>
+  </PropertyGroup>
+  <Target Name="TransformAllFiles" DependsOnTargets="$(TransformAllFilesDependsOn)" AfterTargets="Build;_CopyAppConfigFile">
+    <ItemGroup>
+      <_AppConfigTarget Include="@(AppConfigWithTargetPath->'$(OutDir)%(TargetPath)')" />
+    </ItemGroup>
+    <PropertyGroup>
+      <_AppConfigDest>@(_AppConfigTarget->'%(FullPath)')</_AppConfigDest>
+    </PropertyGroup>
+    <MakeDir Directories="@(_FilesToTransformNotAppConfig->'$(OutDir)%(RelativeDir)')" Condition="Exists('%(RelativeDir)%(Filename).$(Configuration)%(Extension)')" />
+    <TransformXml Source="@(_AppConfigToTransform->'%(FullPath)')" Transform="%(RelativeDir)%(Filename).$(Configuration)%(Extension)" Destination="$(_AppConfigDest)" Condition=" Exists('%(RelativeDir)%(Filename).$(Configuration)%(Extension)') " />
+    <TransformXml Source="@(_FilesToTransformNotAppConfig->'%(FullPath)')" Transform="%(RelativeDir)%(Filename).$(Configuration)%(Extension)" Destination="@(_FilesToTransformNotAppConfig->'$(OutDir)%(RelativeDir)%(Filename)%(Extension)')" Condition=" Exists('%(RelativeDir)%(Filename).$(Configuration)%(Extension)') " />
+  </Target>
+  <Target Name="DiscoverFilesToTransform">
+    <ItemGroup>
+      <_FilesToTransform Include="@(None);@(Content);@(Resource);@(EmbeddedResource)" Condition=" '%(TransformOnBuild)' == 'true' " />
+    </ItemGroup>
+    <PropertyGroup>
+      <_AppConfigFullPath>@(AppConfigWithTargetPath->'%(RootDir)%(Directory)%(Filename)%(Extension)')</_AppConfigFullPath>
+    </PropertyGroup>
+    <ItemGroup>
+      <_FilesToTransform Condition=" '%(FullPath)'=='$(_AppConfigFullPath)' ">
+        <IsAppConfig>true</IsAppConfig>
+      </_FilesToTransform>
+    </ItemGroup>
+    <ItemGroup>
+      <_FilesToTransformNotAppConfig Include="@(_FilesToTransform)" Condition=" '%(IsAppConfig)'!='true'" />
+      <_AppConfigToTransform Include="@(_FilesToTransform)" Condition=" '%(IsAppConfig)'=='true'" />
+    </ItemGroup>
+  </Target>-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66009471-A284-4CFC-A795-021E5104BB76}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Viiar.AtmFinder.UI</RootNamespace>
+    <AssemblyName>Viiar.AtmFinder.UI</AssemblyName>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>
+    </SilverlightVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Viiar.AtmFinder.UI_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Viiar.AtmFinder.UI.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.30816.0</ExpressionBlendVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Rule Sets\DefaultCARules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SlowCheetahTargets Condition=" '$(SlowCheetahTargets)'=='' ">$(LOCALAPPDATA)\Microsoft\MSBuild\SlowCheetah\v1\SlowCheetah.Transforms.targets</SlowCheetahTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug - Cloud|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug - Cloud\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>Bin\Debug\Viiar.AtmFinder.UI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Rule Sets\DefaultCARules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release - Cloud|AnyCPU'">
+    <OutputPath>bin\Release - Cloud\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>Bin\Release\Viiar.AtmFinder.UI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug - Device|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug - Device\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>Bin\Debug\Viiar.AtmFinder.UI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Rule Sets\DefaultCARules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget />
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget />
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget />
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget />
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.0.1.10, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\sl4-windowsphone71\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.WP71, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Threading.Tasks.3.0.1\lib\sl4-wp71\System.Threading.Tasks.WP71.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyVersionInfo.cs">
+      <Link>Properties\CommonAssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AboutApp.xaml.cs">
+      <DependentUpon>AboutApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AppResources.et-EE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.et-EE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AppResources.lt-LT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.lt-LT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AppResources.lv-LV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.lv-LV.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AppResources.ru-RU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.ru-RU.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="ApplicationState.cs" />
+    <Compile Include="CultureHelper.cs" />
+    <Compile Include="EntityExtensions.cs" />
+    <Compile Include="Extensions\IEnumerableOfBanksExtensions.cs" />
+    <Compile Include="InverseVisibilityConverter.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="DataStore\DataStore\DataStore.xaml.cs">
+      <DependentUpon>DataStore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Location\DeviceLocationInfo.cs" />
+    <Compile Include="Location\DirectionsHelper.cs" />
+    <Compile Include="Location\LocationChangedEventArgs.cs" />
+    <Compile Include="PhoneDependencyContainer.cs" />
+    <Compile Include="PivotControlExtensions.cs" />
+    <Compile Include="PushpinTypeBrushConverter.cs" />
+    <Compile Include="DetailsPage.xaml.cs">
+      <DependentUpon>DetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImagePushpin.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Map.xaml.cs">
+      <DependentUpon>Map.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CashMachineRepository.cs" />
+    <Compile Include="Repositories\CloudServiceRepository.cs" />
+    <Compile Include="Repositories\DataLoadEventArgs.cs" />
+    <Compile Include="Repositories\IEntityRepository.cs" />
+    <Compile Include="Repositories\LocalRepository.cs" />
+    <Compile Include="SampleData\ListSampleDataSource\ListSampleDataSource.xaml.cs">
+      <DependentUpon>ListSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\SampleDataSource\SampleDataSource.xaml.cs">
+      <DependentUpon>SampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CloudServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsChangeEventArgs.cs" />
+    <Compile Include="SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneResourceFileReader.cs" />
+    <Compile Include="ViewModels\MyBankViewModel.cs" />
+    <Compile Include="VisibilityConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+    <DesignTimeOnly Include="SampleData\SampleDataSource\SampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\ListSampleDataSource\ListSampleDataSource.xsd" />
+    <None Include="Properties\DataSources\Viiar.AtmFinder.Contracts.Entity.datasource" />
+    <None Include="Properties\DataSources\Viiar.AtmFinder.Contracts.ServiceResponse.datasource" />
+    <None Include="Service References\CloudServiceReference\AtmFinderService.xsd" />
+    <None Include="Service References\CloudServiceReference\AtmFinderService1.xsd" />
+    <None Include="Service References\CloudServiceReference\AtmFinderService2.wsdl" />
+    <None Include="Service References\CloudServiceReference\AtmFinderService2.xsd" />
+    <None Include="Service References\CloudServiceReference\AtmFinderService21.wsdl" />
+    <None Include="Service References\CloudServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\CloudServiceReference\configuration.svcinfo" />
+    <None Include="Service References\CloudServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="icons\appbar.map.globe.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons\appbar.report.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="icons\gemoney-details.png" />
+    <Resource Include="icons\gemoney-list.png" />
+    <Content Include="icons\gemoney-map.png" />
+    <Resource Include="icons\sampo-details.png" />
+    <Resource Include="icons\sampo-list.png" />
+    <Content Include="icons\sampo-map.png" />
+    <Content Include="ServiceReferences.ClientConfig">
+      <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
+    </Content>
+    <Content Include="ServiceReferences.Debug - Device.ClientConfig">
+      <DependentUpon>ServiceReferences.ClientConfig</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </Content>
+    <None Include="ServiceReferences.Debug.ClientConfig">
+      <DependentUpon>ServiceReferences.ClientConfig</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="ServiceReferences.Release.ClientConfig">
+      <DependentUpon>ServiceReferences.ClientConfig</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="ServiceReferences.Debug - Cloud.ClientConfig">
+      <DependentUpon>ServiceReferences.ClientConfig</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="ServiceReferences.Release - Cloud.ClientConfig">
+      <DependentUpon>ServiceReferences.ClientConfig</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <Resource Include="Data\Latvia\swedbank.json" />
+    <Resource Include="Data\Latvia\nordea.json" />
+    <Resource Include="Data\Latvia\dnb.json" />
+    <DesignTimeOnly Include="DataStore\DataStore\DataStore.xsd" />
+    <Resource Include="Data\Latvia\citadele.json" />
+    <Resource Include="Data\Latvia\hipo.json" />
+    <Resource Include="Data\Latvia\seb.json" />
+    <Resource Include="Data\Estonia\swedbank.json" />
+    <Resource Include="Data\Lithuania\swedbank.json" />
+    <Resource Include="Data\Estonia\nordea.json" />
+    <Resource Include="Data\Lithuania\nordea.json" />
+    <Resource Include="Data\Estonia\seb.json" />
+    <Resource Include="Data\Lithuania\seb.json" />
+    <Resource Include="Data\Lithuania\dnb.json" />
+    <None Include="icons\details-icon-template.psd" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\appbar.back.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons\appbar.check.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons\appbar.feature.search.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons\appbar.feature.settings.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons\appbar.next.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons\appbar.refresh.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons\appbar.save.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons\appbar.map.direction.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons\appbar.photo.redeye.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="icons\nordea-details.png" />
+    <Resource Include="icons\nordea-list.png" />
+    <Resource Include="icons\citadele-details.png" />
+    <Resource Include="icons\citadele-list.png" />
+    <Resource Include="icons\dnb-details.png" />
+    <Resource Include="icons\dnb-list.png" />
+    <Resource Include="icons\details.office.png" />
+    <Resource Include="icons\details.cash-out.png" />
+    <Resource Include="icons\hipo-details.png" />
+    <Resource Include="icons\hipo-list.png" />
+    <Resource Include="icons\details.cash-in-sq.png" />
+    <Resource Include="icons\details.cash-out-sq.png" />
+    <Resource Include="icons\details.office-sq.png" />
+    <Content Include="icons\hipo-map.png" />
+    <Resource Include="icons\seb-details.png" />
+    <Resource Include="icons\seb-list.png" />
+    <Resource Include="icons\large.tile.png" />
+    <None Include="icons\marketplace.tile.png" />
+    <Content Include="icons\seb-map.png" />
+    <Resource Include="icons\small.tile.png" />
+    <Content Include="icons\swedbank-map.png" />
+    <Content Include="icons\citadele-map.png" />
+    <Content Include="icons\dnb-map.png" />
+    <Resource Include="icons\nordea-map.png" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="icons\appbar.map.position.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons\appbar.map.centerme.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="icons\details.cash-in.png" />
+    <Resource Include="icons\swedbank-details.png" />
+    <Resource Include="icons\swedbank-list.png" />
+    <DesignTimeOnly Include="SampleData\SampleDataSource\SampleDataSource_Files\image01.png" />
+    <DesignTimeOnly Include="SampleData\SampleDataSource\SampleDataSource_Files\image02.png" />
+    <DesignTimeOnly Include="SampleData\SampleDataSource\SampleDataSource_Files\image03.png" />
+    <DesignTimeOnly Include="SampleData\SampleDataSource\SampleDataSource_Files\image04.png" />
+    <DesignTimeOnly Include="SampleData\SampleDataSource\SampleDataSource_Files\image05.png" />
+    <DesignTimeOnly Include="SampleData\ListSampleDataSource\ListSampleDataSource_Files\image01.png" />
+    <DesignTimeOnly Include="SampleData\ListSampleDataSource\ListSampleDataSource_Files\image02.png" />
+    <DesignTimeOnly Include="SampleData\ListSampleDataSource\ListSampleDataSource_Files\image03.png" />
+    <DesignTimeOnly Include="SampleData\ListSampleDataSource\ListSampleDataSource_Files\image04.png" />
+    <DesignTimeOnly Include="SampleData\ListSampleDataSource\ListSampleDataSource_Files\image05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="AboutApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataStore\DataStore\DataStore.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Map.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <DesignTimeOnly Include="SampleData\SampleDataSource\SampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </DesignTimeOnly>
+    <DesignTimeOnly Include="SampleData\ListSampleDataSource\ListSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </DesignTimeOnly>
+    <Page Include="SettingsPage.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Viiar.AtmFinder.Contracts\Viiar.AtmFinder.Contracts.csproj">
+      <Project>{BFD7E586-AF95-4062-A7B1-CDC7325214A6}</Project>
+      <Name>Viiar.AtmFinder.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Viiar.AtmFinder.Core\Viiar.AtmFinder.Core.csproj">
+      <Project>{A4346ADA-CDDA-4B2E-9570-8BF58B475DFF}</Project>
+      <Name>Viiar.AtmFinder.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AppResources.et-EE.resx">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.et-EE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppResources.lt-LT.resx">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.lt-LT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppResources.lv-LV.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.lv-LV.Designer.cs</LastGenOutput>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppResources.ru-RU.resx">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.ru-RU.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CloudServiceReference\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <Import Project="ServiceReferences.Transform.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  -->
+  <!-- <Target Name="BeforeBuild">
+    <CallTarget Targets="TransformAllFiles" />
+    <Exec Command="attrib -r ServiceReferences.ClientConfig" WorkingDirectory="$(MSBuildProjectDirectory)" />
+    <Exec Command="xcopy &quot;$(OutDir)ServiceReferences.ClientConfig&quot; ServiceReferences.ClientConfig /y" WorkingDirectory="$(MSBuildProjectDirectory)" />
+  </Target> -->
+  <!--<Target Name="BeforeBuild">
+    <Exec Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' " Command="XCOPY ServiceReferences.Debug.ClientConfig ServiceReferences.ClientConfig /R /Y" IgnoreExitCode="true" />
+    <Exec Condition=" '$(Configuration)|$(Platform)' == 'Debug - Cloud|AnyCPU' " Command="XCOPY 'ServiceReferences.Debug - Cloud.ClientConfig' ServiceReferences.ClientConfig /R /Y" IgnoreExitCode="true" />
+  </Target>-->
+  <!-- 
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="$(SlowCheetahTargets)" Condition="Exists('$(SlowCheetahTargets)')" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+</Project>

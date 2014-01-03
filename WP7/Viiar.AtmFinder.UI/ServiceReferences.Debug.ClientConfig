@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.serviceModel>
+    <bindings>
+      <customBinding>
+        <binding name="CustomBinding_IAtmFinderService" sendTimeout="00:01:00" xdt:Transform="SetAttributes(sendTimeout)" xdt:Locator="Match(name)">
+        </binding>
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost:81/AtmFinderService.svc" name="CustomBinding_IAtmFinderService"
+                xdt:Transform="SetAttributes(address)" xdt:Locator="Match(name)"/>
+    </client>
+  </system.serviceModel>
+</configuration>

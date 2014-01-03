@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutDescription" xml:space="preserve">
+    <value>Have you ever been in situation when you need to get some cash to make important payment or order some service, but you have no idea where could be nearest ATM machine? With ATM finder you can easily find cash nearby. Application also shows bank offices and cash-in machines. The list can be configured. You can set your home bank and set to show only those.</value>
+  </data>
+  <data name="AboutIntro" xml:space="preserve">
+    <value>With the ATM Finder app you will be able to find your cash nearby easily.</value>
+  </data>
+  <data name="AboutPivotHeading" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>ATM Finder</value>
+  </data>
+  <data name="Authors" xml:space="preserve">
+    <value>Author: Valdis Iljuconoks, MVP C#
+http://www.dotnet.lv/blogs/vi/
+Copyright © Valdis Iljuconoks, 2012</value>
+  </data>
+  <data name="CashInIconText" xml:space="preserve">
+    <value>cash in</value>
+  </data>
+  <data name="CashInPivotHeading" xml:space="preserve">
+    <value>cash in</value>
+  </data>
+  <data name="CashOutIconText" xml:space="preserve">
+    <value>cash out</value>
+  </data>
+  <data name="CashOutPivotHeading" xml:space="preserve">
+    <value>cash out</value>
+  </data>
+  <data name="CenterMeBarButton" xml:space="preserve">
+    <value>my position</value>
+  </data>
+  <data name="CommissionWithDrawalLongSign" xml:space="preserve">
+    <value>Commission withdrawal</value>
+  </data>
+  <data name="CommissionWithDrawalSign" xml:space="preserve">
+    <value>commission</value>
+  </data>
+  <data name="ContactByEmail" xml:space="preserve">
+    <value>Contact by email: valdis.iljuconoks@dotnet.lv</value>
+  </data>
+  <data name="CountrySettingText" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="CountToShowSettingsText" xml:space="preserve">
+    <value>Count to show</value>
+  </data>
+  <data name="DetailsPageTitle" xml:space="preserve">
+    <value>details</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>valdis.iljuconoks@dotnet.lv</value>
+  </data>
+  <data name="ErrorDialogTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="LocationServicesNotEnabledError" xml:space="preserve">
+    <value>Location services are not enabled.
+Navigate to Settings page in order to enable location services usage in the application.</value>
+  </data>
+  <data name="LocationServicesSettingsText" xml:space="preserve">
+    <value>Location services</value>
+  </data>
+  <data name="MapBarButton" xml:space="preserve">
+    <value>map</value>
+  </data>
+  <data name="MyBankSettingsText" xml:space="preserve">
+    <value>My bank</value>
+  </data>
+  <data name="NearbyPivotHeading" xml:space="preserve">
+    <value>nearby</value>
+  </data>
+  <data name="OfficeIconText" xml:space="preserve">
+    <value>office</value>
+  </data>
+  <data name="OfficesPivotHeading" xml:space="preserve">
+    <value>offices</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Privacy:
+ATM Finder respects user privacy and therefore no user information is collected nor stored.
+ATM Finder uses location services to detect device location to provide information about closest ATM machine or bank office.
+Data collected from location service are not stored or forwarded.
+User always is able to switch off location service usage in ATM Finder.</value>
+  </data>
+  <data name="RateApplication" xml:space="preserve">
+    <value>Rate app on marketplace</value>
+  </data>
+  <data name="RefreshBarButton" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="SettingsMenuItem" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="SettingsPageName" xml:space="preserve">
+    <value>general</value>
+  </data>
+  <data name="ShowOnlyMyBankSettingsText" xml:space="preserve">
+    <value>Show only my bank</value>
+  </data>
+  <data name="ShowTypesOfCashInSettingsText" xml:space="preserve">
+    <value>ATM (cash in)</value>
+  </data>
+  <data name="ShowTypesOfCashOutSettingsText" xml:space="preserve">
+    <value>ATM (cash out)</value>
+  </data>
+  <data name="ShowTypesOfOfficesSettingsText" xml:space="preserve">
+    <value>Offices</value>
+  </data>
+  <data name="ShowTypesOfSettingsText" xml:space="preserve">
+    <value>Show types of</value>
+  </data>
+  <data name="ShowTypesOfShopsSettingsText" xml:space="preserve">
+    <value>Shops</value>
+  </data>
+  <data name="SwitchedOff" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="SwitchedOn" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>Versions:
+
+v 2.0
+- Added Windows Azure backend
+- Fixed some bugs
+- Added some banks in all Baltic states
+
+v 1.2
+- Fixed some bugs
+
+v 1.1
+- Added multi-country feature
+- Added Swebdank and Nordea banks (Estonia)
+- Added Swebdank and Nordea banks (Lithiania)
+- Added SEB bank (Eastonia and Lithiania)
+- Added DNB bank (Lithiania)
+- Fixed some friendly chain info issues
+
+v 1.0
+- Added Swedbank, Nordea, Citadele and DNB banks (Latvia territory)
+- Added Hipoteku and SEB banks (Latvia territory)
+- Added filtering of entity types
+- Added items count configuration
+- Added friendly chain info (commission withdrawal)</value>
+  </data>
+  <data name="ZoomToClosestSettingsText" xml:space="preserve">
+    <value>Zoom to closest</value>
+  </data>
+  <data name="DirectionsBarButton" xml:space="preserve">
+    <value>Directions</value>
+  </data>
+  <data name="StartLocationMapDirections" xml:space="preserve">
+    <value>Your current location</value>
+  </data>
+  <data name="SomewhereHere" xml:space="preserve">
+    <value>somewhere here</value>
+  </data>
+  <data name="ArealViewBarButton" xml:space="preserve">
+    <value>change view</value>
+  </data>
+  <data name="MyBankPivotHeading" xml:space="preserve">
+    <value>my bank</value>
+  </data>
+  <data name="AppearancePivotHeading" xml:space="preserve">
+    <value>appearance</value>
+  </data>
+  <data name="ConnectivityPivotHeading" xml:space="preserve">
+    <value>connectivity</value>
+  </data>
+  <data name="OnlineServicesSettingsText" xml:space="preserve">
+    <value>Online services (Windows © Azure)</value>
+  </data>
+  <data name="EntityTooFarMessage" xml:space="preserve">
+    <value>Seems like closest ATM is pretty far away.</value>
+  </data>
+  <data name="ReportBarButton" xml:space="preserve">
+    <value>report</value>
+  </data>
+  <data name="ShowMapOnStartupSettingsText" xml:space="preserve">
+    <value>Show map on startup</value>
+  </data>
+  <data name="ShowCoordinatesSettingsText" xml:space="preserve">
+    <value>Show coordinates</value>
+    <comment>TODO</comment>
+  </data>
+  <data name="NativeOSLanguageWarning" xml:space="preserve">
+    <value>*** Running in language which is not natively supported in OS.
+
+Have you ever been in situation when you need to get some cash to make important payment or order some service, but you have no idea where could be nearest ATM machine? With ATM finder you can easily find cash nearby. Application also shows bank offices and cash-in machines. The list can be configured. You can set your home bank and set to show only those.</value>
+  </data>
+</root>

@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE3229B1-B2D0-4684-AD85-4669D4093BAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Viiar.AtmFinder.Core.Testable</RootNamespace>
+    <AssemblyName>Viiar.AtmFinder.Core.Testable</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug - Cloud|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug - Cloud\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Viiar.AtmFinder.Core.Testable.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release - Cloud|AnyCPU'">
+    <OutputPath>bin\Release - Cloud\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Viiar.AtmFinder.Core.Testable.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug - Device|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug - Device\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Viiar.AtmFinder.Core.Testable.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug - Staging|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug - Staging\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.10\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyVersionInfo.cs">
+      <Link>Properties\CommonAssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\CountryConstants.cs">
+      <Link>CountryConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\DependencyContainer.cs">
+      <Link>DependencyContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Extensions\EnumerableExtensions.cs">
+      <Link>Extensions\EnumerableExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Extensions\IEnumerableOfEntityExtensions.cs">
+      <Link>Extensions\IEnumerableOfEntityExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Extensions\JsonTokenExtensions.cs">
+      <Link>Extensions\JsonTokenExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Extensions\ObservableCollectionExtensions.cs">
+      <Link>Extensions\ObservableCollectionExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\IResourceFileReader.cs">
+      <Link>IResourceFileReader.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Models\Bank.cs">
+      <Link>Models\Bank.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Properties\AssemblyInfo.cs">
+      <Link>AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\BaseRepository.cs">
+      <Link>Repositories\BaseRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\CountryRepositoryBase.cs">
+      <Link>Repositories\CountryRepositoryBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\CountryRepositoryFactory.cs">
+      <Link>Repositories\CountryRepositoryFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Estonia\EntityChainConstants.cs">
+      <Link>Repositories\Estonia\EntityChainConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Estonia\EstoniaCountryRepository.cs">
+      <Link>Repositories\Estonia\EstoniaCountryRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Estonia\NordeaRepository.cs">
+      <Link>Repositories\Estonia\NordeaRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Estonia\SampoRepository.cs">
+      <Link>Repositories\Estonia\SampoRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Estonia\SebRepository.cs">
+      <Link>Repositories\Estonia\SebRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Estonia\SwedbankRepository.cs">
+      <Link>Repositories\Estonia\SwedbankRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Latvia\CitadeleRepository.cs">
+      <Link>Repositories\Latvia\CitadeleRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Latvia\DnbRepository.cs">
+      <Link>Repositories\Latvia\DnbRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Latvia\EntityChainConstants.cs">
+      <Link>Repositories\Latvia\EntityChainConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Latvia\FriendlyChainHelper.cs">
+      <Link>Repositories\Latvia\FriendlyChainHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Latvia\GEMoneyRepository.cs">
+      <Link>Repositories\Latvia\GEMoneyRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Latvia\HipoRepository.cs">
+      <Link>Repositories\Latvia\HipoRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Latvia\LatviaCountryRepository.cs">
+      <Link>Repositories\Latvia\LatviaCountryRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Latvia\NordeaRepository.cs">
+      <Link>Repositories\Latvia\NordeaRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Latvia\SebRepository.cs">
+      <Link>Repositories\Latvia\SebRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Latvia\SwedbankRepository.cs">
+      <Link>Repositories\Latvia\SwedbankRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Lithuania\CitadeleRepository.cs">
+      <Link>Repositories\Lithuania\CitadeleRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Lithuania\DnbRepository.cs">
+      <Link>Repositories\Lithuania\DnbRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Lithuania\EntityChainConstants.cs">
+      <Link>Repositories\Lithuania\EntityChainConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Lithuania\LithuaniaCountryRepository.cs">
+      <Link>Repositories\Lithuania\LithuaniaCountryRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Lithuania\NordeaRepository.cs">
+      <Link>Repositories\Lithuania\NordeaRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Lithuania\SebRepository.cs">
+      <Link>Repositories\Lithuania\SebRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\Lithuania\SwedbankRepository.cs">
+      <Link>Repositories\Lithuania\SwedbankRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\RepositoryAttribute.cs">
+      <Link>Repositories\RepositoryAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Repositories\RepositoryFactory.cs">
+      <Link>Repositories\RepositoryFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Viiar.AtmFinder.Core\Settings.cs">
+      <Link>Settings.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Viiar.AtmFinder.Contracts\Viiar.AtmFinder.Contracts.csproj">
+      <Project>{BFD7E586-AF95-4062-A7B1-CDC7325214A6}</Project>
+      <Name>Viiar.AtmFinder.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

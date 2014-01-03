@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vsm="using:Windows.UI.Xaml">
+    <vsm:ResourceDictionary.MergedDictionaries>
+        <vsm:ResourceDictionary Source="StandardStyles.xaml" />
+    </vsm:ResourceDictionary.MergedDictionaries>
+
+    <vsm:Style x:Key="BasicTextStyleGray" BasedOn="{StaticResource BasicTextStyle}" TargetType="TextBlock">
+        <vsm:Setter Property="Foreground" Value="Gray" />
+    </vsm:Style>
+
+    <vsm:Style x:Key="BasicListViewStyle" TargetType="ListView">
+        <vsm:Setter Property="Background" Value="{StaticResource ApplicationPageBackgroundThemeBrush}" />
+    </vsm:Style>
+
+    <vsm:Style x:Key="CommissionWithdrawalSignStyle" TargetType="TextBlock">
+        <vsm:Setter Property="Foreground" Value="Red" />
+        <vsm:Setter Property="Margin" Value="0,10,10,0" />
+        <vsm:Setter Property="FontSize" Value="22" />
+    </vsm:Style>
+
+    <vsm:Style x:Key="CommissionWithdrawalSignDetailsStyle" TargetType="TextBlock">
+        <vsm:Setter Property="Foreground" Value="Red" />
+        <vsm:Setter Property="FontSize" Value="14" />
+    </vsm:Style>
+
+    <vsm:DataTemplate x:Key="StandardSmall700x150ItemTemplate">
+        <Grid Width="794" Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="200" Height="150">
+                <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" />
+            </Border>
+            <StackPanel Grid.Column="1" Margin="20,0,0,0" VerticalAlignment="Center">
+                <TextBlock Text="{Binding Title}" Style="{StaticResource BodyTextStyle}" FontSize="28" TextWrapping="NoWrap" />
+                <TextBlock Text="{Binding Country}" Style="{StaticResource BodyTextStyle}"
+                           Foreground="{StaticResource ApplicationSecondaryForegroundThemeBrush}" TextWrapping="NoWrap" />
+            </StackPanel>
+        </Grid>
+    </vsm:DataTemplate>
+
+    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" x:Key="RootGradientBackgroundBrush">
+        <GradientStop Color="#FF1D1D1D" />
+        <GradientStop Color="#454545" Offset="1" />
+    </LinearGradientBrush>
+
+</ResourceDictionary>

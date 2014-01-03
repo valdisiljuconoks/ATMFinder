@@ -1,0 +1,108 @@
+﻿<phone:PhoneApplicationPage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:DataStore="clr-namespace:Expression.Blend.DataStore.DataStore"
+                            xmlns:local="clr-namespace:Viiar.AtmFinder.UI" mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" x:Class="Viiar.AtmFinder.UI.MainPage"
+                            Orientation="Portrait" shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <local:VisibilityConverter x:Key="VisibilityConverter" />
+        <local:AppSettings x:Key="appSettings" />
+        <DataStore:DataStore x:Key="DataStore" d:IsDataSource="True" />
+        <DataTemplate x:Key="ItemTemplate">
+            <Border VerticalAlignment="Top" Width="500" BorderThickness="0,0,0,1" BorderBrush="#FF333333">
+                <StackPanel Orientation="Horizontal" Margin="0,8,0,8">
+                    <Image Source="{Binding SmallIcon}" Width="80" Height="80" />
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Width="Auto">
+                        <TextBlock Text="{Binding TitleShort}" FontFamily="Segoe WP Semibold" FontSize="26" />
+                        <TextBlock Text="{Binding AddressShort}" FontSize="18" FontFamily="Segoe WP Light" />
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding DistanceView}" FontSize="18" FontFamily="Segoe WP Light" />
+                            <TextBlock Text="{Binding Path=LocalizedResources.CommissionWithDrawalSign, Source={StaticResource LocalizedStrings}}"
+                                       Visibility="{Binding ShowCommissionWithdrawalSign, Converter={StaticResource VisibilityConverter}}" VerticalAlignment="Top" Margin="24,0,0,0"
+                                       FontFamily="Segoe WP Light" FontSize="18" Foreground="Red" />
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+    <phone:PhoneApplicationPage.FontFamily>
+        <StaticResource ResourceKey="PhoneFontFamilyNormal" />
+    </phone:PhoneApplicationPage.FontFamily>
+    <phone:PhoneApplicationPage.FontSize>
+        <StaticResource ResourceKey="PhoneFontSizeNormal" />
+    </phone:PhoneApplicationPage.FontSize>
+    <phone:PhoneApplicationPage.Foreground>
+        <StaticResource ResourceKey="PhoneForegroundBrush" />
+    </phone:PhoneApplicationPage.Foreground>
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn" />
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn" />
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut" />
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut" />
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent" DataContext="{Binding Source={StaticResource DataStore}}">
+        <!--Pivot Control--><!--Pivot Control-->
+        <ProgressBar x:Name="progress" Height="10" VerticalAlignment="Top" Visibility="Collapsed" IsIndeterminate="True" />
+        <!--Pivot Control-->
+        <controls:Pivot Title="ATM Finder" DataContext="{Binding Source={StaticResource ListSampleDataSource}}" FontFamily="Segoe WP Light" x:Name="pivotMain"
+                        SelectionChanged="OnPivotSelectionChanged">
+            <!--Pivot item two--><!--Pivot item one-->
+            <controls:PivotItem x:Name="piEntityList" Header="{Binding Path=LocalizedResources.NearbyPivotHeading, Source={StaticResource LocalizedStrings}}">
+                <Grid>
+                    <ListBox x:Name="listAtms" Margin="0" SelectionChanged="OnListItemSelected" HorizontalAlignment="Stretch"
+                             ItemsSource="{Binding Collection}" ItemTemplate="{StaticResource ItemTemplate}"></ListBox>
+                </Grid>
+            </controls:PivotItem>
+            <controls:PivotItem Header="{Binding Path=LocalizedResources.CashOutPivotHeading, Source={StaticResource LocalizedStrings}}" x:Name="piCashOut">
+                <Grid>
+                    <ListBox x:Name="listAtmsCashOut" Margin="0" SelectionChanged="OnListItemSelected" HorizontalAlignment="Stretch"
+                             ItemsSource="{Binding Collection}" ItemTemplate="{StaticResource ItemTemplate}"></ListBox>
+                </Grid>
+            </controls:PivotItem>
+            <controls:PivotItem Header="{Binding Path=LocalizedResources.CashInPivotHeading, Source={StaticResource LocalizedStrings}}" x:Name="piCashIn">
+                <Grid>
+                    <ListBox x:Name="listAtmsCashIn" Margin="0" SelectionChanged="OnListItemSelected" HorizontalAlignment="Stretch"
+                             ItemsSource="{Binding Collection}" ItemTemplate="{StaticResource ItemTemplate}"></ListBox>
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Header="{Binding Path=LocalizedResources.OfficesPivotHeading, Source={StaticResource LocalizedStrings}}" x:Name="piOffices">
+                <Grid>
+                    <ListBox x:Name="listOffices" Margin="0" SelectionChanged="OnListItemSelected" HorizontalAlignment="Stretch"
+                             ItemsSource="{Binding Collection}" ItemTemplate="{StaticResource ItemTemplate}"></ListBox>
+                </Grid>
+            </controls:PivotItem>
+            <controls:PivotItem Header="{Binding Path=LocalizedResources.AboutPivotHeading, Source={StaticResource LocalizedStrings}}" x:Name="piAbout">
+                <local:AboutApp x:Name="aboutApp" />
+            </controls:PivotItem>
+        </controls:Pivot>
+        <TextBlock x:Name="coord" Height="32" Margin="0,24,8,0" TextWrapping="Wrap" FontSize="14" Text="(--; --)" VerticalAlignment="Top"
+                   HorizontalAlignment="Right"
+                   Visibility="{Binding Instance.ShowCoordinatesSetting, Source={StaticResource appSettings}, Converter={StaticResource VisibilityConverter}}">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{StaticResource PhoneDisabledColor}" />
+            </TextBlock.Foreground>
+        </TextBlock>
+    </Grid>
+</phone:PhoneApplicationPage>

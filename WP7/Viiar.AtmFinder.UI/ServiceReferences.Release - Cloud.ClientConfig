@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.serviceModel>
+    <client>
+      <endpoint address="http://atmfinder.cloudapp.net/AtmFinderService.svc" name="CustomBinding_IAtmFinderService"
+                xdt:Transform="SetAttributes(address)" xdt:Locator="Match(name)"/>
+    </client>
+  </system.serviceModel>
+</configuration>

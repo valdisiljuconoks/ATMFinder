@@ -1,0 +1,51 @@
+﻿<local:SettingsPageBase x:Name="pageRoot" x:Class="Viiar.AtmFinder.W8.SettingsPage"
+                        DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="using:Viiar.AtmFinder.W8"
+                        mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="346">
+
+    <Page.Resources>
+        <local:ApplicationSettings x:Key="settings" />
+    </Page.Resources>
+
+    <Border BorderBrush="#00b2f0" BorderThickness="1,0,0,0">
+        <Grid VerticalAlignment="Stretch" Style="{StaticResource LayoutRootStyle}" Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Border BorderBrush="#10A0E1" BorderThickness="0,0,0,0" Grid.Row="1">
+                <Grid VerticalAlignment="Stretch">
+                    <ScrollViewer Style="{StaticResource VerticalScrollViewerStyle}">
+                        <Grid Margin="40,33,40,39" VerticalAlignment="Top" Grid.RowSpan="3">
+
+                            <StackPanel x:Name="FlyoutContent">
+                                <TextBlock Style="{StaticResource BasicTextStyle}" Margin="0,25,0,8" Text="Items to show in each group:" TextWrapping="Wrap" />
+                                <ComboBox x:Name="cb" SelectedIndex="0" HorizontalAlignment="Left"
+                                          ItemsSource="{Binding Source={StaticResource settings}, Path=Instance.ItemsToShowSelection}"
+                                          SelectedItem="{Binding Source={StaticResource settings}, Path=Instance.ItemsToShow, Mode=TwoWay}" />
+                                <ToggleSwitch IsOn="{Binding Source={StaticResource settings}, Path=Instance.ShowMapOnStartup, Mode=TwoWay}" Margin="-7,8,0,0"
+                                              Header="Show map on startup" HorizontalAlignment="Stretch"></ToggleSwitch>
+                                <ToggleSwitch IsOn="{Binding Source={StaticResource settings}, Path=Instance.ShowCoordinates, Mode=TwoWay}" Margin="-7,8,0,0"
+                                              Header="Show coordinates" HorizontalAlignment="Stretch"></ToggleSwitch>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+            <!-- Back button and page title -->
+            <Grid Background="#10A0E1" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="40, 32, 17, 13">
+                    <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Margin="0,3,0,0"
+                            Style="{StaticResource SettingsBackButtonStyle}" />
+                    <TextBlock Text="Appearance" Margin="5,0,0,0" FontFamily="Segoe UI" FontWeight="SemiLight" FontSize="24.6667" Foreground="White" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</local:SettingsPageBase>

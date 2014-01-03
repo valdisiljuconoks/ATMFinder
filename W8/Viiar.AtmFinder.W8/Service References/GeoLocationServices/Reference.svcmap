@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b7ffc721-ab1b-49b0-91d2-9b97537b274b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:81/geolocationservice.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GeoLocationService.wsdl" MetadataType="Wsdl" ID="0b58cf24-11f4-4560-8aff-7e279df90a9d" SourceId="1" SourceUrl="http://127.0.0.1:81/GeoLocationService.svc?wsdl" />
+    <MetadataFile FileName="GeoLocationService1.wsdl" MetadataType="Wsdl" ID="11150604-0163-4d76-9c44-b8b2fdc10227" SourceId="1" SourceUrl="http://127.0.0.1:81/GeoLocationService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="GeoLocationService.disco" MetadataType="Disco" ID="009c4f63-4d44-4261-8b0b-eeb1e21cfafe" SourceId="1" SourceUrl="http://127.0.0.1:81/GeoLocationService.svc?disco" />
+    <MetadataFile FileName="GeoLocationService.xsd" MetadataType="Schema" ID="8e6fd8c0-fc11-449e-b9b0-d8dc852a32ec" SourceId="1" SourceUrl="http://127.0.0.1:81/GeoLocationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="GeoLocationService1.xsd" MetadataType="Schema" ID="cdd441ab-eff4-4550-b359-ecc34541f7d0" SourceId="1" SourceUrl="http://127.0.0.1:81/GeoLocationService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
